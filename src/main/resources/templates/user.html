@@ -22,8 +22,8 @@
             <td th:text="${user.id}">ID</td>
             <td th:text="${user.username}">USERNAME</td>
             <td th:text="${user.password}">PASSWORD</td>
-            <td th:text="${user.firstname}">FirstNAME</td>
-            <td th:text="${user.lastname}">LastNAME</td>
+            <td th:text="${user.firstname}">FIRSTNAME</td>
+            <td th:text="${user.lastname}">LASTNAME</td>
             <td th:text="${user.age}">AGE</td>
             <td th:text="${user.email}">E-MAIL</td>
             <td th:text="${user.roles}"></td>
@@ -36,7 +36,10 @@
 </body>
 <br><br>
 </form>
-<input type="submit" value="logout"/>
+
+
+<a th:href="@{/logout}">Logout</a>
+
 </html>
 <style>
 
@@ -54,3 +57,4 @@
         background-color: #45a049;
     }
 </style>
+

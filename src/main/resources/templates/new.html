@@ -12,32 +12,48 @@
         <table>
             <tr>
                 <td>Username:</td>
-                <td><input type="text" th:field="*{username}"></td>
+                <td><label>
+                    <input type="text" th:field="*{username}">
+                </label></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type="text" th:field="*{password}"></td>
+                <td><label>
+                    <input type="text" th:field="*{password}">
+                </label></td>
             </tr>
             <tr>
                 <td>FirstName:</td>
-                <td><input type="text" th:field="*{firstname}"/></td>
+                <td><label>
+                    <input type="text" th:field="*{firstname}"/>
+                </label></td>
             </tr>
             <tr>
                 <td>LastName:</td>
-                <td><input type="text" th:field="*{lastname}"/></td>
+                <td><label>
+                    <input type="text" th:field="*{lastname}"/>
+                </label></td>
             </tr>
             <tr>
                 <td>Age:</td>
-                <td><input type="text" th:field="*{age}"/></td>
+                <td><label>
+                    <input type="text" th:field="*{age}"/>
+                </label></td>
             </tr>
 
             <tr>
                 <td>E-mail:</td>
-                <td><input type="text" th:field="*{email}"/></td>
+                <td><label>
+                    <input type="text" th:field="*{email}"/>
+                </label></td>
             </tr>
 
-            <input type="checkbox" name="checkBoxRoles" value="ROLE_USER"/>USER
-            <input type="checkbox" name="checkBoxRoles" value="ROLE_ADMIN"/>ADMIN
+            <label>
+                <input type="checkbox" name="checkBoxRoles" value="ROLE_USER"/>
+            </label>USER
+            <label>
+                <input type="checkbox" name="checkBoxRoles" value="ROLE_ADMIN"/>
+            </label>ADMIN
             <br/>
         </table>
         <br/>
@@ -71,4 +87,3 @@
 
     </style>
 
-</html>

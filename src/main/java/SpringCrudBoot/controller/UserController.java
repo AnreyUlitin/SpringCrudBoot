@@ -53,7 +53,6 @@ public class UserController {
         }
         user.setRoles(roleSet);
         userService.addUser(user);
-
         return "redirect:/admin";
     }
 

@@ -1,7 +1,7 @@
 package SpringCrudBoot.service;
 
-import SpringCrudBoot.model.*;
-import java.util.*;
+import SpringCrudBoot.model.Role;
+import java.util.List;
 
 
 public interface RoleService {

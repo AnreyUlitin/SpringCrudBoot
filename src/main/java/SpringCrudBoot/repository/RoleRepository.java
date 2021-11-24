@@ -1,8 +1,8 @@
 package SpringCrudBoot.repository;
 
 
-import SpringCrudBoot.model.*;
-import org.springframework.data.jpa.repository.*;
+import SpringCrudBoot.model.Role;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {
     Role getRoleByRole(String role);
