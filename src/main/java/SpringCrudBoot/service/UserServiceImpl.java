@@ -2,8 +2,7 @@ package SpringCrudBoot.service;
 
 import SpringCrudBoot.model.*;
 import SpringCrudBoot.repository.*;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import javax.transaction.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
@@ -28,6 +27,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void updateUser(User user) {
+//        Set<Role> roleSet = new HashSet<>();
+//        roleSet.add(Role.findById(1L).get());
         userRepository.save(user);
     }
 
