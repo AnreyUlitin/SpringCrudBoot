@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+
+
+    <form action="/edit" th:method="put">
+        <table>
+            <tr>
+                <td>ID:</td>
+                <td><label>
+                    <input type="number" th:field="*{user.id}" readonly/>
+                </label></td>
+
+            </tr>
+            <tr>
+                <td>UserName:</td>
+                <td><label>
+                    <input type="text" th:field="*{user.username}"/>
+                </label></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><label>
+                    <input type="text" th:field="*{user.password}"/>
+                </label></td>
+            </tr>
+            <tr>
+                <td>FirstName:</td>
+                <td><label>
+                    <input type="text" th:field="*{user.firstname}"/>
+                </label></td>
+            </tr>
+            <tr>
+                <td>LastName:</td>
+                <td><label>
+                    <input type="text" th:field="*{user.lastname}"/>
+                </label></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><label>
+                    <input type="text" th:field="*{user.age}"/>
+                </label></td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td><label>
+                    <input type="text" th:field="*{user.email}"/>
+                </label></td>
+            </tr>
+
+
+<!--            <br>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <label>Roles:-->
+<!--                        <select size="2" multiple name="listRoles" required="required">-->
+<!--                            <option value="1">USER</option>-->
+<!--                            <option value="2">ADMIN</option>-->
+<!--                        </select>-->
+<!--                    </label>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <br>-->
+
+
+            <label>Roles:</label>
+            <br/>
+            <label>
+                <input type="checkbox" name="boxRoles" value="ROLE_USER"/>
+            </label>USER
+            <label>
+                <input type="checkbox" name="boxRoles" value="ROLE_ADMIN"/>
+            </label>ADMIN
+            <br/>
+
+        </table>
+
+        <br/>
+        <td colspan="2"><input type="submit" value="Edit"></td>
+        <br/>
+        <br/>
+        <hr/>
+        <a th:href="@{/admin}">back</a>
+        <br/>
+        <br/>
+        <a th:href="@{/logout}">logout</a>
+
+    </form>
+
+
+<style>
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: left;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+</style>
+
+
+
+
