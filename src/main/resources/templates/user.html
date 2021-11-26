@@ -1,60 +1,76 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
+
     <meta charset="UTF-8">
-    <title>User page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <title>User Page</title>
+
 </head>
-<body>
-<div>
-    <h3><p th:text="'User page : ' + ${user.firstname} + ' ' + ${user.lastname}"></p></h3>
-    <table border="1">
-        <tr>
-            <th>Id</th>
-            <th>Username</th>
-            <th>Password</th>
-            <th>FirstName</th>
-            <th>LastName</th>
-            <th>Age</th>
-            <th>E-mail</th>
-            <th>Role</th>
-        </tr>
-        <tr>
-            <td th:text="${user.id}">ID</td>
-            <td th:text="${user.username}">USERNAME</td>
-            <td th:text="${user.password}">PASSWORD</td>
-            <td th:text="${user.firstname}">FIRSTNAME</td>
-            <td th:text="${user.lastname}">LASTNAME</td>
-            <td th:text="${user.age}">AGE</td>
-            <td th:text="${user.email}">E-MAIL</td>
-            <td th:text="${user.roles}"></td>
-        </tr>
-    </table>
-    <br/>
-    <br/>
-    <hr/>
+<body class="bg-light">
+<nav class="navbar navbar-dark bg-dark">
+
+    <a class="navbar-brand" href="#">
+        <strong><span th:text="${user.username}"></span></strong> with roles: <span th:text="${user.roles}"></span>
+    </a>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+        </li>
+    </ul>
+
+</nav>
+
+<div class="container-fluid">
+    <div class="row vh-100">
+        <div class="col mt-3 pl-0 bg-white">
+            <nav class="nav nav-pills flex-column">
+                <div sec:authorize="hasRole('ROLE_ADMIN')">
+                    <li class="active">
+                        <a class="nav-link" href="/admin">Admin</a>
+                    </li>
+                </div>
+                <li class="active">
+                    <a class="nav-link active" href="/user">User</a>
+                </li>
+            </nav>
+        </div>
+
+        <div class="col-10 bg-light">
+            <div><h3>Users information-page</h3></div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab">
+                    <div><h5 class="card-header">About User</h5></div>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Role</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="table-secondary">
+                            <td th:text="${user.id}">ID</td>
+                            <td th:text="${user.lastname}">FIRST_NAME</td>
+                            <td th:text="${user.lastname}">LAST_NAME</td>
+                            <td th:text="${user.age}">AGE</td>
+                            <td th:text="${user.username}">EMAIL</td>
+                            <td th:text="${user.roles}">ROLE</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 </body>
-<br><br>
-</form>
-
-
-<a th:href="@{/logout}">Logout</a>
-
 </html>
-<style>
-
-    input[type=submit] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        float: left;
-    }
-
-    input[type=submit]:hover {
-        background-color: #45a049;
-    }
-</style>
 
