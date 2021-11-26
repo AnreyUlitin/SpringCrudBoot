@@ -1,6 +1,6 @@
-package SpringCrudBoot.service;
+package SpringCrudBootsTrap.service;
 
-import SpringCrudBoot.model.Role;
+import SpringCrudBootsTrap.model.Role;
 import java.util.List;
 
 
@@ -16,3 +16,5 @@ public interface RoleService {
 
     Role getRoleByRole(String role);
 }
+
+

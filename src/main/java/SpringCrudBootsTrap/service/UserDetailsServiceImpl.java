@@ -1,7 +1,7 @@
-package SpringCrudBoot.service;
+package SpringCrudBootsTrap.service;
 
 
-import SpringCrudBoot.repository.*;
+import SpringCrudBootsTrap.repository.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.*;
@@ -23,3 +23,4 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 
 }
+

@@ -1,6 +1,6 @@
-package SpringCrudBoot.service;
+package SpringCrudBootsTrap.service;
 
-import SpringCrudBoot.model.*;
+import SpringCrudBootsTrap.model.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,5 +17,10 @@ public interface UserService {
 
     User getUserByname(String username);
 
+    User getUser(Long id);
+
     List<User> getAllUsers();
+
 }
+
+

@@ -1,9 +1,8 @@
-package SpringCrudBoot.controller;
+package SpringCrudBootsTrap.controller;
 
-import SpringCrudBoot.model.*;
-import SpringCrudBoot.service.*;
+import SpringCrudBootsTrap.model.*;
+import SpringCrudBootsTrap.service.*;
 import java.util.*;
-import org.hibernate.sql.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.security.core.annotation.*;
 import org.springframework.stereotype.*;

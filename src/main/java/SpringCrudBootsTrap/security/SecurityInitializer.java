@@ -1,4 +1,4 @@
-package SpringCrudBoot.security;
+package SpringCrudBootsTrap.security;
 
 import org.springframework.security.web.context.*;
 

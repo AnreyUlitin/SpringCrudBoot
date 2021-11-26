@@ -1,7 +1,7 @@
-package SpringCrudBoot.service;
+package SpringCrudBootsTrap.service;
 
-import SpringCrudBoot.model.Role;
-import SpringCrudBoot.repository.RoleRepository;
+import SpringCrudBootsTrap.model.Role;
+import SpringCrudBootsTrap.repository.RoleRepository;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,6 @@ public class RoleServiceImpl implements RoleService {
     public RoleServiceImpl(RoleRepository roleRepository) {
         this.roleRepository = roleRepository;
     }
-
 
     @Override
     public void addRole(Role role) {
@@ -45,5 +44,7 @@ public class RoleServiceImpl implements RoleService {
         return roleRepository.getRoleByRole(role);
     }
 }
+
+
 
 

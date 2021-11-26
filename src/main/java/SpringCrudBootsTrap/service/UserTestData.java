@@ -1,6 +1,6 @@
-package SpringCrudBoot.service;
+package SpringCrudBootsTrap.service;
 
-import SpringCrudBoot.model.*;
+import SpringCrudBootsTrap.model.*;
 import java.util.Set;
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.*;

@@ -1,4 +1,4 @@
-package SpringCrudBoot.model;
+package SpringCrudBootsTrap.model;
 
 import java.util.*;
 import javax.persistence.*;
@@ -62,5 +62,4 @@ public class Role implements GrantedAuthority {
     }
 
 }
-
 

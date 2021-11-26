@@ -1,4 +1,4 @@
-package SpringCrudBoot.model;
+package SpringCrudBootsTrap.model;
 
 
 import java.util.*;
@@ -163,4 +163,5 @@ public class User implements UserDetails {
     }
 
 }
+
 
